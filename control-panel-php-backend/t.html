@@ -1,0 +1,53 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script>
+        // wait for the DOM to be loaded
+        $(document).ready(function() {
+            // bind 'myForm' and provide a simple callback function
+            $('#myForm').ajaxForm(function() {
+                alert("Command sent!");
+            });
+        });
+    </script>
+<body style="background-color:powderblue;">
+
+  <style>
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    cursor: pointer;
+  }
+
+  .button1 {background-color: #FF0000	;} /* Green */
+  .button2 {background-color: #008CBA; } /* Blue */
+  .button3{ background-color: #008CBA;position: absolute;
+
+    top: 10px;
+    left: 90px;}
+  .button4{position: absolute;background-color: #008CBA;
+    left: 100px;
+    top: 120px;
+
+
+  </style>
+<form  id="myForm" action="sql.php" method="post" name="myForm">
+
+<button  type="submit" value="F" name="submit" class="button button3">Forward</button><br><br><br>
+<button type="submit" value="L" name="submit" class="button button2">Left</button>
+<button type="submit" value="S" name="submit" class="button button1">Stop</button>
+<button type="submit" value="R"  name="submit" class="button button2">Right</button>
+<button type="submit" value="B"  name="submit" class="button button4">Back</button>
+
+</form>
+
+</body>
+</html>
